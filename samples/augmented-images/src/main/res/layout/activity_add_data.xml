@@ -1,0 +1,104 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:popupTheme="@style/ThemeOverlay.MaterialComponents.ActionBar"
+        android:theme="@style/AppTheme.Toolbar"
+        android:layout_weight="1"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
+        android:text="Please select image and it's corresponding models or videos"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/mainViewData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/image_path"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Path To Image"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/add_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Select Images"
+                android:layout_weight="3"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_marginTop="100dp">
+
+            <TextView
+                android:id="@+id/model_path"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Path To Model"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/add_model"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Select Models"
+                android:layout_weight="3"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/add_to_database"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Add to database"
+            android:layout_weight="3"
+            android:layout_marginTop="50dp"/>
+        <Button
+            android:id="@+id/remove_database"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Remove Database"
+            android:layout_weight="3"
+            android:layout_marginTop="50dp"/>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/arFragmentTemp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
+</FrameLayout>

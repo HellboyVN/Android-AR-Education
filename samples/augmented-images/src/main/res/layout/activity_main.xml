@@ -1,0 +1,74 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:popupTheme="@style/ThemeOverlay.MaterialComponents.ActionBar"
+            android:theme="@style/AppTheme.Toolbar"
+            android:layout_weight="1"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp">
+            <Button
+                android:id="@+id/augmented"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/bt1"
+                android:layout_gravity="center"
+                android:layout_weight="3"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp">
+            <Button
+                android:id="@+id/view3d"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/bt2"
+                android:layout_gravity="center"
+                android:layout_weight="3"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp">
+            <Button
+                android:id="@+id/add_database"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/bt3"
+                android:layout_gravity="center"
+                android:layout_weight="3"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
+</FrameLayout>
